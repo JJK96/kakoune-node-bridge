@@ -13,7 +13,7 @@ plug 'JJK96/kakoune-node-bridge' %{
   map global normal = ': node-bridge-send<ret>R'
   # run some node code initially
   node-bridge-send %{
-from math import *
+    fs = require('fs')
   }
   
 }
