@@ -39,7 +39,6 @@ define-command -docstring 'Stop node and remove FIFOs' \
 node-bridge-stop %{
     nop %sh{
         if $kak_opt_node_bridge_running; then
-            cat $kak_opt_node_bridge_out &
             echo ".exit" > $kak_opt_node_bridge_in
             rm $kak_opt_node_bridge_in
             rm $kak_opt_node_bridge_out
