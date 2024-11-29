@@ -62,7 +62,6 @@ node-bridge-send -params 0..1 %{
         if [ $# -eq 0 ]; then
             eval set -- "$kak_quoted_selections"
         fi
-        out=""
         while [ $# -gt 0 ]; do
             output="$(eval $cat_command)" && echo "set-option -add global node_bridge_output %{$output}" &
             echo "$1" > $kak_opt_node_bridge_in &

@@ -1,7 +1,7 @@
 const kakoune_node_bridge_fs = require('fs');
 
 //From https://stackoverflow.com/questions/67322922/context-preserving-eval
-var kakoune_node_bridge__EVAL = s => eval(`void (__EVAL = ${kakoune_node_bridge__EVAL.toString()}); ${s}`);
+var kakoune_node_bridge__EVAL = s => eval(`void (kakoune_node_bridge__EVAL = ${kakoune_node_bridge__EVAL.toString()}); ${s}`);
 
 function kakoune_node_bridge_evaluate(expr) {
     return kakoune_node_bridge__EVAL(expr);
